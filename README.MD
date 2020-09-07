@@ -5,6 +5,8 @@ Implement simple UI for constructing simple isometric
 maps that involves math (screen space to map transformation and back)
 with scripting engine that provides some functionality for configuration
 preparation (scripts that allow configuring map builder with small effort)
+without any external graphics libs/frameworks (opengl, d3dx, vulkan etc) 
+using pure java approach (images, canvas etc)
 
 #### Tasks
  - [x] Implement simple UI for map construction
