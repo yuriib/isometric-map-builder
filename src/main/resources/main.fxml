@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<Pane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" styleClass="body" stylesheets="@./css/main.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.isoview.Controller">
+	<children>
+		<VBox>
+			<children>
+				<MenuBar>
+					<menus>
+						<Menu mnemonicParsing="false" text="File">
+							<items>
+								<MenuItem mnemonicParsing="false" onAction="#open" text="Open..."/>
+								<MenuItem mnemonicParsing="false" onAction="#saveAs" text="Save as..."/>
+							</items>
+						</Menu>
+						<Menu mnemonicParsing="false" text="Help">
+							<items>
+								<MenuItem mnemonicParsing="false" onAction="#about" text="About"/>
+							</items>
+						</Menu>
+					</menus>
+				</MenuBar>
+				<VBox>
+					<children>
+						<GridPane hgap="5.0" vgap="5.0">
+							<columnConstraints>
+								<ColumnConstraints hgrow="NEVER"/>
+								<ColumnConstraints hgrow="SOMETIMES"/>
+							</columnConstraints>
+							<rowConstraints>
+								<RowConstraints vgrow="SOMETIMES"/>
+								<RowConstraints vgrow="SOMETIMES"/>
+								<RowConstraints vgrow="SOMETIMES"/>
+								<RowConstraints vgrow="SOMETIMES"/>
+								<RowConstraints vgrow="SOMETIMES"/>
+								<RowConstraints vgrow="SOMETIMES"/>
+							</rowConstraints>
+							<children>
+								<Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Screen (x,y):"/>
+								<Label fx:id="screenPosLabel" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="0, 0" GridPane.columnIndex="1"/>
+								<Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="World (x,y):" GridPane.rowIndex="1"/>
+								<Label fx:id="worldPosLabel" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="0, 0" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+								<Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Selected (x,y):" GridPane.rowIndex="2"/>
+								<Label fx:id="selectedMapCellPosLabel" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="0, 0" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+								<Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Offset (x,y):" GridPane.rowIndex="3"/>
+								<Label fx:id="posOffsetInSelectedCellLabel" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="0, 0" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+								<Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="FPS:" GridPane.rowIndex="4"/>
+								<Label fx:id="fpsLabel" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="0" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+							</children>
+							<padding>
+								<Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+							</padding>
+						</GridPane>
+					</children>
+				</VBox>
+				<HBox>
+					<children>
+						<ScrollPane maxHeight="434.0" maxWidth="578.0" pannable="true">
+							<content>
+								<Canvas fx:id="viewport" height="432.0" width="576.0"/>
+							</content>
+						</ScrollPane>
+						<ScrollPane fitToHeight="true" fitToWidth="true" maxHeight="432.0">
+							<content>
+								<VBox prefWidth="125.0" spacing="5.0">
+									<children>
+										<TitledPane animated="false" text="Tiles">
+											<content>
+												<ScrollPane fitToWidth="true">
+													<content>
+														<VBox fx:id="tileOptionsContainer" alignment="CENTER" spacing="5"/>
+													</content>
+												</ScrollPane>
+											</content>
+											<VBox.margin>
+												<Insets/>
+											</VBox.margin>
+										</TitledPane>
+										<ToggleButton fx:id="toggleGridButton" maxWidth="1.7976931348623157E308" onAction="#toggleGrid" selected="false" text="Grid" VBox.vgrow="NEVER"/>
+									</children>
+								</VBox>
+							</content>
+							<padding>
+								<Insets left="5.0" right="5.0"/>
+							</padding>
+						</ScrollPane>
+					</children>
+				</HBox>
+			</children>
+		</VBox>
+	</children>
+</Pane>

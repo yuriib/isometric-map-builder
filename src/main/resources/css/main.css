@@ -1,0 +1,135 @@
+.body {
+    -light: silver;
+    -dark: gray;
+    -dimdark: dimgray;
+    -black: black;
+
+    -fx-background-color: -light;
+    -fx-font-family: "8BIT WONDER";
+    -fx-font-size: 10px;
+    -fx-text-fill: -black;
+}
+
+/* Overrides */
+.label {
+    -fx-text-fill: -black;
+}
+
+.vbox {
+    -fx-background-color: none;
+}
+
+.hbox {
+    -fx-background-color: none;
+}
+
+.menu {
+    -fx-background-color: -dark;
+}
+
+.menu:hover {
+    -fx-background-color: -dimdark;
+}
+
+.menu-bar {
+    -fx-background-color: -dark;
+}
+
+.menu-item {
+    -fx-background-color: -dark;
+}
+
+.menu-item:hover {
+    -fx-background-color: -dimdark;
+}
+
+.context-menu {
+    -fx-background-color: -dark;
+    -fx-background-insets: 0, 0, 0;
+    -fx-padding: 0 0 0 0;
+    -fx-border-width: 1px;
+    -fx-border-color: -dimdark;
+}
+
+.titled-pane {
+    -fx-text-fill: -black;
+    -fx-background-color: -light;
+    -fx-border-color: -dimdark;
+}
+
+.titled-pane > .title {
+    -fx-background-color: -light;
+    -fx-border-color: -dimdark;
+    -fx-border-width: 0 0 1px 0;
+}
+
+.titled-pane > .content {
+    -fx-background-color: -light;
+}
+
+.titled-pane:collapsed {
+    -fx-border-width: 1px 1px 0 1px;
+}
+
+.scroll-bar {
+    -fx-border-radius: 0px;
+    -fx-background-radius: 0px;
+    -fx-background-color: -light;
+}
+
+.scroll-bar > .thumb {
+    -fx-border-radius: 0px;
+    -fx-background-radius: 0px;
+    -fx-background-color: -dimdark;
+}
+
+.scroll-bar > .decrement-button {
+    -fx-border-radius: 0px;
+    -fx-background-radius: 0px;
+    -fx-background-color: -light;
+}
+
+.scroll-bar > .increment-button {
+    -fx-border-radius: 0px;
+    -fx-background-radius: 0px;
+    -fx-background-color: -light;
+}
+
+.scroll-pane {
+    -fx-background-color: none;
+}
+
+.scroll-pane > * {
+    -fx-background-color: none;
+}
+
+.title .arrow-button .arrow {
+    -fx-background-color: -black;
+}
+
+.titled-pane .content .toggle-button {
+    -fx-border-width: 0;
+}
+
+.toggle-button {
+    -fx-text-fill: -black;
+    -fx-background-color: -light;
+    -fx-border-width: 1px;
+    -fx-border-radius: 0;
+    -fx-background-radius: 0;
+    -fx-border-color: -dimdark;
+}
+
+.toggle-button:hover {
+    -fx-background-color: -dark;
+    -fx-border-width: 1;
+    -fx-border-radius: 0;
+    -fx-background-radius: 0;
+}
+
+.toggle-button:selected {
+    -fx-background-color: -dimdark;
+    -fx-border-width: 1;
+    -fx-border-radius: 0;
+    -fx-background-radius: 0;
+}
